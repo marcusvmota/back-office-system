@@ -1,0 +1,25 @@
+//Imports de estilo
+import styles from "./InformacoesCard.module.css"
+
+//Imports de servicos
+import { Informacoes } from "../../../../services/informacoesService"
+
+interface InformacoesCardProps {
+  informacoes: Informacoes
+}
+
+const InformacoesCard: React.FC<InformacoesCardProps> = ({ informacoes }) => {
+  const { foto, nome, cargo, resumo } = informacoes
+  return (
+    <div className={styles.card}>
+      <img src={foto} alt={`${nome}"S foto`} className={styles.foto} />
+      <div className={styles.content}>
+        <h3 className={styles.nome}>{nome}</h3>
+        <p className={styles.cargo}>{cargo}</p>
+        <p className={styles.resumo}>{resumo}</p>
+      </div>
+    </div>
+  )
+}
+
+export default InformacoesCard

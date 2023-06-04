@@ -1,0 +1,22 @@
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  /* height: 175px; */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  height: calc(100vh - 175px);
+  padding: 1rem;
+  box-sizing: border-box;
+}
